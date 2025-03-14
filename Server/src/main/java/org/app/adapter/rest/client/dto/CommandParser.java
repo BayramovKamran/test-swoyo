@@ -1,4 +1,4 @@
-package org.app.adapter.rest.dto;
+package org.app.adapter.rest.client.dto;
 
 import java.util.HashMap;
 import java.util.Map;

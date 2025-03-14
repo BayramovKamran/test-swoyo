@@ -11,6 +11,7 @@ import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 import lombok.extern.slf4j.Slf4j;
 import org.app.adapter.rest.ServerHandler;
+import org.app.adapter.rest.server.ServerCommandDispatcher;
 
 @Slf4j
 public class Server extends ServerSettings{
@@ -30,6 +31,11 @@ public class Server extends ServerSettings{
                         }
                     });
             ChannelFuture future = b.bind(PORT).sync();
+
+            Thread commandThread = new Thread(new ServerCommandDispatcher(bossGroup, workerGroup));
+            commandThread.setDaemon(true);
+            commandThread.start();
+
             log.info("Server started on port " + PORT);
             future.channel().closeFuture().sync();
         } catch (Exception e) {

@@ -4,6 +4,7 @@ import org.app.domain.User.User;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class UserRepository {
     private static UserRepository instance;
@@ -31,5 +32,17 @@ public class UserRepository {
 
     public List<User> getAllUsers() {
         return new ArrayList<>(users);
+    }
+
+    public void loadUsers(List<Map<String, Object>> data) {
+        users.clear();
+        for (Map<String, Object> userData : data) {
+            User user = new User((String) userData.get("username"));
+            users.add(user);
+        }
+    }
+
+    public void clear(){
+        users.clear();
     }
 }

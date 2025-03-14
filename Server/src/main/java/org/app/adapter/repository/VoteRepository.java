@@ -1,6 +1,7 @@
 package org.app.adapter.repository;
 
 import org.app.domain.Topic.Topic;
+import org.app.domain.User.User;
 import org.app.domain.Vote.Vote;
 
 import java.util.ArrayList;
@@ -67,5 +68,36 @@ public class VoteRepository {
             return votes.remove(vote);
         }
         return false;
+    }
+
+    public void loadVotes(List<Map<String, Object>> data) {
+        votesByTopic.clear();
+        for (Map<String, Object> voteData : data) {
+            String name = (String) voteData.get("name");
+            String description = (String) voteData.get("description");
+
+            Map<String, Object> topicData = (Map<String, Object>) voteData.get("topic");
+            String topicName = (String) topicData.get("name");
+
+            Map<String, Object> creatorData = (Map<String, Object>) voteData.get("creator");
+            String creatorUsername = (String) creatorData.get("username");
+
+            Topic topic = TopicRepository.getInstance().getAllTopics().stream()
+                    .filter(t -> t.getName().equals(topicName))
+                    .findFirst().orElse(null);
+
+            User creator = UserRepository.getInstance().getAllUsers().stream()
+                    .filter(u -> u.getUsername().equals(creatorUsername))
+                    .findFirst().orElse(null);
+
+            if (topic != null && creator != null) {
+                Map<String, Integer> options = (Map<String, Integer>) voteData.get("options");
+                Vote vote = new Vote(name, description, options, creator, topic);
+                addVote(vote);
+            }
+        }
+    }
+    public void clear(){
+        votesByTopic.clear();
     }
 }

@@ -6,8 +6,9 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
-import org.app.adapter.rest.dto.CommandParser;
-import org.app.adapter.rest.dto.CommandRequest;
+import org.app.adapter.rest.client.CommandDispatcher;
+import org.app.adapter.rest.client.dto.CommandParser;
+import org.app.adapter.rest.client.dto.CommandRequest;
 import org.app.domain.User.User;
 import org.app.domain.Vote.Vote;
 

@@ -1,7 +1,8 @@
-package org.app.adapter.rest;
+package org.app.adapter.rest.client;
 
 import io.netty.channel.ChannelHandlerContext;
-import org.app.adapter.rest.dto.CommandRequest;
+import org.app.adapter.rest.ServerHandler;
+import org.app.adapter.rest.client.dto.CommandRequest;
 import org.app.app.api.Command;
 import org.app.app.impl.command.client.*;
 

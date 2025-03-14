@@ -1,0 +1,30 @@
+{
+  "topics" : [ {
+    "name" : "forest",
+    "owner" : {
+      "username" : "vova"
+    }
+  } ],
+  "votes" : [ {
+    "name" : "mkdir",
+    "description" : "kruto",
+    "options" : {
+      "net" : 1,
+      "da" : 0
+    },
+    "creator" : {
+      "username" : "vova"
+    },
+    "topic" : {
+      "name" : "forest",
+      "owner" : {
+        "username" : "vova"
+      }
+    }
+  } ],
+  "users" : [ {
+    "username" : "nika"
+  }, {
+    "username" : "vova"
+  } ]
+}

@@ -1,6 +1,0 @@
-2025-03-13 20:22:14.359 [Thread-0] INFO  org.app.Client - Connection refused: no further information: localhost/127.0.0.1:8080
-2025-03-13 20:22:24.047 [main] ERROR org.app.RunClientApplication - Connection failed
-2025-03-13 20:24:43.854 [main] INFO  org.app.Client - hello
-2025-03-13 20:25:10.566 [main] INFO  org.app.Client - login -u=has
-2025-03-13 20:26:31.068 [main] INFO  org.app.Client - create topic -u=Top
-2025-03-13 20:27:09.332 [main] INFO  org.app.Client - create topic -u=name
