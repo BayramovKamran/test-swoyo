@@ -61,4 +61,5 @@ public class RegisterUserCommandTest {
         User user = UserRepository.getInstance().getUser("user1");
         assertNotNull(user);
     }
+
 }

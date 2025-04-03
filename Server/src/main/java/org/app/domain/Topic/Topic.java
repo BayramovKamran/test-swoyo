@@ -11,6 +11,7 @@ import org.app.domain.User.User;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Topic{
+
     private String name;
     private User owner;
 }

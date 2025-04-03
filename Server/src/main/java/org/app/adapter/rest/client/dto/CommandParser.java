@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CommandParser {
+
     public static CommandRequest parse(String input) {
         if (input == null || input.trim().isEmpty()) {
             return null;
@@ -44,4 +45,5 @@ public class CommandParser {
         }
         return params;
     }
+
 }

@@ -15,9 +15,12 @@ import org.mockito.Mockito;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class DeleteCommandTest {
+
     private DeleteCommand command;
     private ChannelHandlerContext ctx;
     private ServerHandler handler;
@@ -27,8 +30,8 @@ public class DeleteCommandTest {
     @BeforeEach
     public void setUp() {
         command = new DeleteCommand();
-        ctx = Mockito.mock(ChannelHandlerContext.class);
-        handler = Mockito.mock(ServerHandler.class);
+        ctx = mock(ChannelHandlerContext.class);
+        handler = mock(ServerHandler.class);
 
         TopicRepository.getInstance().clear();
 
@@ -120,4 +123,5 @@ public class DeleteCommandTest {
 
         verify(ctx).writeAndFlush("Голосование 'Vote1' успешно удалено из топика 'TestTopic'.");
     }
+
 }

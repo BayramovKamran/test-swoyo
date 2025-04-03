@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CreateVoteCommand implements Command {
+
     @Override
     public void execute(ChannelHandlerContext ctx, Map<String, String> params, ServerHandler handler) {
         if (handler.getClient() == null) {
@@ -80,4 +81,5 @@ public class CreateVoteCommand implements Command {
 
         ctx.writeAndFlush(String.format("Голосование '%s' успешно создано в топике '%s'.", voteName, topicName));
     }
+
 }

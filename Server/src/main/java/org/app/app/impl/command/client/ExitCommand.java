@@ -7,6 +7,7 @@ import org.app.app.api.Command;
 import java.util.Map;
 
 public class ExitCommand implements Command {
+
     @Override
     public void execute(ChannelHandlerContext ctx, Map<String, String> params, ServerHandler handler) {
         ctx.writeAndFlush("Завершаем работу программы...").addListener(future -> {
@@ -15,4 +16,5 @@ public class ExitCommand implements Command {
             }
         });
     }
+
 }

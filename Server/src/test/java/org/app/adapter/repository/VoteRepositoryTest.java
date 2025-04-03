@@ -5,13 +5,18 @@ import org.app.domain.User.User;
 import org.app.domain.Vote.Vote;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 public class VoteRepositoryTest {
+
     private VoteRepository voteRepository;
     private Topic topic;
     private User user;
@@ -61,4 +66,5 @@ public class VoteRepositoryTest {
         assertTrue(removed);
         assertNull(voteRepository.getVote("VoteToDelete", topic));
     }
+
 }

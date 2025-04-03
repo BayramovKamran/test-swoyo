@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 public class UserRepository {
+
     private static UserRepository instance;
     private final List<User> users = new ArrayList<>();
 
@@ -45,4 +46,5 @@ public class UserRepository {
     public void clear(){
         users.clear();
     }
+
 }

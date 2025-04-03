@@ -15,6 +15,7 @@ import org.app.adapter.rest.server.ServerCommandDispatcher;
 
 @Slf4j
 public class Server extends ServerSettings{
+
     public static void main(String[] args) {
         EventLoopGroup bossGroup = new NioEventLoopGroup(1);
         EventLoopGroup workerGroup = new NioEventLoopGroup();
@@ -45,4 +46,5 @@ public class Server extends ServerSettings{
             workerGroup.shutdownGracefully();
         }
     }
+
 }

@@ -12,6 +12,7 @@ import java.util.Map;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Vote{
+
     private String name;
     private String description;
     private Map<String, Integer> options;

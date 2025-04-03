@@ -11,6 +11,7 @@ import org.app.domain.Vote.Vote;
 import java.util.Map;
 
 public class DeleteCommand implements Command {
+
     @Override
     public void execute(ChannelHandlerContext ctx, Map<String, String> params, ServerHandler handler) {
         if (handler.getClient() == null) {
@@ -49,4 +50,5 @@ public class DeleteCommand implements Command {
             ctx.writeAndFlush("Ошибка при удалении голосования.");
         }
     }
+
 }

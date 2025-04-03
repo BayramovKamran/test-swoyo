@@ -98,4 +98,5 @@ public class ViewCommandTest {
         assertTrue(response.contains("Название: Vote1"), "Response should contain vote name");
         assertTrue(response.contains("Описание: Описание голосования"), "Response should contain vote description");
     }
+
 }

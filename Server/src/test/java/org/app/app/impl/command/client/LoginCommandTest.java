@@ -58,4 +58,5 @@ public class LoginCommandTest {
         assertEquals("Пользователь user1 успешно авторизован", response);
         verify(handler).setClient(any(User.class));
     }
+
 }

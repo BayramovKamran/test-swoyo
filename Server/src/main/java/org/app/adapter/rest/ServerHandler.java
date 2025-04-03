@@ -25,13 +25,13 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
     private Vote pendingVote;
 
     @Override
-    public void channelActive(ChannelHandlerContext ctx) throws Exception {
+    public void channelActive(ChannelHandlerContext ctx){
         log.info("User connected:{}", ctx);
         channels.add(ctx.channel());
     }
 
     @Override
-    protected void channelRead0(ChannelHandlerContext ctx, String msg) throws Exception {
+    protected void channelRead0(ChannelHandlerContext ctx, String msg){
         if (client != null) {
             log.info("Get command from User {}, command {}", client.getUsername(), msg);
         }
@@ -67,4 +67,5 @@ public class ServerHandler extends SimpleChannelInboundHandler<String> {
         log.info("User disconnect");
         ctx.close();
     }
+
 }

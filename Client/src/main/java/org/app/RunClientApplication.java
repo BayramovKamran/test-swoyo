@@ -14,19 +14,19 @@ public class RunClientApplication {
         Client client = new Client();
 
         int coutTry = 0;
-        while((!client.hasConnect()) && (coutTry < 10)){
+        while ((!client.hasConnect()) && (coutTry < 10)) {
             sleep(500);
             coutTry++;
         }
 
-        if (coutTry >= 10){
+        if (coutTry >= 10) {
             System.out.println("Ошибка подключения");
             exit(-1);
         }
 
         System.out.println("Введите команду info для получения информации о командах");
 
-        while (client.hasConnect()){
+        while (client.hasConnect()) {
             String in = scanner.nextLine();
             if (in.startsWith("create vote -t=")) {
                 String topic = in.substring("create vote -t=".length()).trim();
@@ -71,4 +71,5 @@ public class RunClientApplication {
 
         return command.toString();
     }
+
 }

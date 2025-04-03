@@ -13,8 +13,10 @@ import org.mockito.Mockito;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class CreateTopicCommandTest {
 
@@ -84,4 +86,5 @@ public class CreateTopicCommandTest {
         assertNotNull(created);
         assertEquals("NewTopic", created.getName());
     }
+
 }

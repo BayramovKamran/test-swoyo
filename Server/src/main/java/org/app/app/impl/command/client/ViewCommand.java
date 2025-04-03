@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 public class ViewCommand implements Command {
+
     @Override
     public void execute(ChannelHandlerContext ctx, Map<String, String> params, ServerHandler handler) {
         if (handler.getClient() == null) {
@@ -73,4 +74,5 @@ public class ViewCommand implements Command {
         }
         ctx.writeAndFlush(response.toString());
     }
+
 }

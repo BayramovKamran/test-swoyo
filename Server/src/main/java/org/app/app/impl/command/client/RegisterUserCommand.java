@@ -9,6 +9,7 @@ import org.app.domain.User.User;
 import java.util.Map;
 
 public class RegisterUserCommand implements Command {
+
     @Override
     public void execute(ChannelHandlerContext ctx, Map<String, String> params, ServerHandler handler) {
         String username = params.get("r");
@@ -26,6 +27,6 @@ public class RegisterUserCommand implements Command {
 
         UserRepository.getInstance().addUser(new User(username));
         ctx.writeAndFlush("Пользователь " + username + " успешно зарегистрирован");
-
     }
+
 }

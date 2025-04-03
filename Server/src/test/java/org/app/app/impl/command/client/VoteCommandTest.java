@@ -87,4 +87,5 @@ public class VoteCommandTest {
 
         assertEquals("Vote1", capturedVote.getName());
     }
+
 }

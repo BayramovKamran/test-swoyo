@@ -14,6 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class SaveCommand implements ServerCommand {
+
     @Override
     public void execute(ChannelHandlerContext ctx, Map<String, String> params, ServerHandler handler) {
         String filename = params.get("filename");
@@ -45,4 +46,5 @@ public class SaveCommand implements ServerCommand {
             System.out.println("Ошибка при сохранении данных: " + e.getMessage());
         }
     }
+
 }

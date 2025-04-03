@@ -9,6 +9,7 @@ import org.app.domain.User.User;
 import java.util.Map;
 
 public class LoginCommand implements Command {
+
     @Override
     public void execute(ChannelHandlerContext ctx, Map<String,String> params, ServerHandler handler) {
         String username = params.get("u");
@@ -27,4 +28,5 @@ public class LoginCommand implements Command {
         handler.setClient(user);
         ctx.writeAndFlush("Пользователь " + username + " успешно авторизован");
     }
+
 }

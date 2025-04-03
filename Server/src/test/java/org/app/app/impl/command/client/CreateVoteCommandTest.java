@@ -15,8 +15,11 @@ import org.mockito.Mockito;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 public class CreateVoteCommandTest {
 
@@ -87,4 +90,5 @@ public class CreateVoteCommandTest {
         assertTrue(vote.getOptions().containsKey("option2"));
         assertTrue(vote.getOptions().containsKey("option3"));
     }
+
 }

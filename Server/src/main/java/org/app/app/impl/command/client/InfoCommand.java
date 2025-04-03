@@ -7,6 +7,7 @@ import org.app.app.api.Command;
 import java.util.Map;
 
 public class InfoCommand implements Command {
+
     @Override
     public void execute(ChannelHandlerContext ctx, Map<String, String> params, ServerHandler handler) {
         String info = """
@@ -43,4 +44,5 @@ public class InfoCommand implements Command {
 
         ctx.writeAndFlush(info);
     }
+
 }

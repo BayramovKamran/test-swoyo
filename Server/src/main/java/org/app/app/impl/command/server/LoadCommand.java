@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 public class LoadCommand implements ServerCommand {
+
     @Override
     public void execute(ChannelHandlerContext ctx, Map<String, String> params, ServerHandler handler) {
         String filename = params.get("filename");
@@ -55,4 +56,5 @@ public class LoadCommand implements ServerCommand {
             System.out.println("Ошибка при загрузке данных: " + e.getMessage());
         }
     }
+
 }

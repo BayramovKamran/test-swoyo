@@ -7,8 +7,9 @@ import org.app.app.api.ServerCommand;
 import java.util.Map;
 
 public class ExitCommand implements ServerCommand {
+
     @Override
     public void execute(ChannelHandlerContext ctx, Map<String, String> params, ServerHandler handler) {
-
     }
+
 }

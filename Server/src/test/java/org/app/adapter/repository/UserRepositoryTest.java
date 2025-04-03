@@ -3,11 +3,15 @@ package org.app.adapter.repository;
 import org.app.domain.User.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
+
 public class UserRepositoryTest {
+
     private UserRepository repository;
 
     @BeforeEach
@@ -39,4 +43,5 @@ public class UserRepositoryTest {
     void testGetNonExistingUser() {
         assertNull(repository.getUser("NonExisting"));
     }
+
 }

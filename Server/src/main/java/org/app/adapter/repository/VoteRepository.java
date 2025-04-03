@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class VoteRepository {
+
     private static VoteRepository instance;
     private final Map<String, List<Vote>> votesByTopic = new HashMap<>();
 
@@ -100,4 +101,5 @@ public class VoteRepository {
     public void clear(){
         votesByTopic.clear();
     }
+
 }

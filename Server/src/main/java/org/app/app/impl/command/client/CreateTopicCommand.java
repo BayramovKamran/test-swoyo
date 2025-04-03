@@ -9,6 +9,7 @@ import org.app.domain.Topic.Topic;
 import java.util.Map;
 
 public class CreateTopicCommand implements Command {
+
     @Override
     public void execute(ChannelHandlerContext ctx, Map<String, String> params, ServerHandler handler) {
         if (handler.getClient() == null) {
@@ -36,4 +37,5 @@ public class CreateTopicCommand implements Command {
 
         ctx.writeAndFlush(String.format("Тема '%s' успешно создана", topicName));
     }
+
 }
